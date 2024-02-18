@@ -1,0 +1,35 @@
+/*2023-02-14*/
+/*Do not modify this file, place a local copy in "axs_site/" or theme's directory!*/
+@page {
+	margin:2cm;
+	padding:0;
+	}
+body {
+	margin:0;
+	padding:0;
+	font-family:"Times New Roman", "Times", serif;
+	font-size:2.5mm;
+	}
+a {	color:inherit;	}
+img {	max-width:100%;	}
+p {}
+
+#page-header {	padding-bottom:0.5cm;	}
+#axs_overlay, nav.inpage, #langs, #login, #menu1, #menu1sub, #menu2, #admin, #counter {	display:none;	}
+#breadcrumb {}
+#content {}
+	#content a[href]::after {
+		content:" (" attr(href) ")";
+		margin:0 1mm 1mm 0;
+		}
+	#breadcrumb a[href]::after {	display:none;	}
+	#content .search-hilight {
+		font-weight:bold;
+		}
+#page-footer {	padding-top:1cm;	}
+#dev .axs {
+	float:right;
+	font:2mm "Arial", "Helvetica", sans-serif;
+	}
+.visuallyhidden {	display:none;	}
+/*2008*/

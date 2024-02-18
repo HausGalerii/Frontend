@@ -1,0 +1,107 @@
+:root {
+  --main-color: #D0AA2C;
+  --padding: 2rem;
+  --small-padding: 1rem;
+  --button-border: solid 1px;
+}
+
+#collections-banner {
+  margin-top: var(--padding);
+  margin-bottom: var(--padding);
+  background: rgb(37, 37, 37);
+}
+
+#collections-banner a {
+  text-decoration: none;
+}
+
+#collections-banner article {
+  padding-top: var(--padding);
+  padding-bottom: var(--padding);
+}
+
+#collections-banner header {
+  padding-top: var(--small-padding);
+  margin: var(--small-padding);
+}
+
+.box-container {
+  padding-top: var(--padding);
+  padding-left: var(--small-padding);
+  padding-right: var(--small-padding);
+  display: flex;
+  justify-content: space-between;
+}
+
+.collection-text {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: small;
+  padding-bottom: var(--small-padding);
+}
+
+.see-all {
+  font-size: small;
+  color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+}
+
+.arrow {
+  padding-left: 10px;
+  display: inline-block;
+}
+
+/* This is really helpful for future underlines */
+.section-title {
+  margin-bottom: 5px;
+  text-decoration: 2px underline var(--main-color);
+  text-underline-offset: 5px;
+}
+
+.collection-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 40px;
+  font-size: 13px;
+  border: var(--button-border);
+  border-color: var(--main-color);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+
+.image-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  #collections-banner .max-width {
+    padding-bottom: var(--padding);
+  }
+
+  #collections-banner article {
+    display: flex; 
+    flex-direction:row-reverse;
+    padding-top: var(--padding);
+    padding-bottom: 0;
+  }
+
+  #collections-banner header {
+    padding-right: var(--padding);
+  }
+
+  .box-container {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: var(--small-padding);
+    margin-right: var(--small-padding);
+  }
+
+  .collection-text {
+    width: 320px;
+  }
+}
