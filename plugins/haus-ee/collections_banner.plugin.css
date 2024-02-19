@@ -16,6 +16,8 @@
 }
 
 #collections-banner article {
+  display: flex; 
+  flex-direction: column-reverse;
   padding-top: var(--padding);
   padding-bottom: var(--padding);
 }
@@ -23,6 +25,10 @@
 #collections-banner header {
   padding-top: var(--small-padding);
   margin: var(--small-padding);
+}
+
+#collections-banner h3 {
+  text-decoration: none;
 }
 
 .box-container {
@@ -46,24 +52,22 @@
   align-items: center;
 }
 
+.see-all a {
+  display: inline-block;
+  padding: 0.3rem 3rem 0.3rem 1rem;
+  background: url(gfx/arrow.png) right no-repeat;
+  background-size: auto 1.5em;
+}
+
 .arrow {
   padding-left: 10px;
   display: inline-block;
 }
 
-/* This is really helpful for future underlines */
-.section-title {
-  margin-bottom: 5px;
-  text-decoration: 2px underline var(--main-color);
-  text-underline-offset: 5px;
-}
-
 .collection-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 150px;
-  height: 40px;
+  max-width: 300px;
+  display: inline-block;
+  padding: 10px;
   font-size: 13px;
   border: var(--button-border);
   border-color: var(--main-color);
@@ -85,7 +89,7 @@
 
   #collections-banner article {
     display: flex; 
-    flex-direction:row-reverse;
+    flex-direction: row;
     padding-top: var(--padding);
     padding-bottom: 0;
   }

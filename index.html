@@ -120,15 +120,18 @@ axs.menu.cfg={
 			<div class="max-width">
 				<div class="box-container">
 					<!-- I changed the name of the title to match the provided example -->
-					<h2 class="section-title">Kureeritud kollektsioonid</h2>
+					<h2>Kureeritud kollektsioonid</h2>
 					<div class="see-all">
 						<a href="https://localhost/haus.ee/?c=collections-banner&amp;l=et">Vaata kõiki</a>
-						<a href="https://localhost/haus.ee/?c=collections-banner&amp;l=et">
-							<img src="content/right-arrow.png" class="arrow" alt="arrow">
-						</a>
 					</div>
 				</div>
 				<article id="collection123" class="item">
+					<header>
+						<h3>Maastiku maalid</h3>
+						<p class="collection-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Lorem ipsum dolor sit amet, consectetur.</p>
+						<!-- added a collection-button class to match the design in css -->
+						<a class="collection-button" href="#">Vaata kollektsiooni</a>
+					</header>
 					<!-- Added a div to contain all of the images -->
 					<div class="image-container">
 						<a href="#"><img src="content/20555_t.jpg" alt="Hugo Mitt &quot;Astrid vaasis&quot;"></a>
@@ -136,38 +139,32 @@ axs.menu.cfg={
 						<a href="#"><img src="content/20516_t.jpg" alt="Edmond Arnold Blumenfeldt &quot;Seened ja lilled&quot;"></a>
 						<a href="#"><img src="content/20515_t.jpg" alt="Edmond Arnold Blumenfeldt &quot;Viinamarjad ja seened&quot;"></a>
 					</div>
-					<header>
-						<h3>Maastiku maalid</h3>
-						<p class="collection-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
-						<!-- added a collection-button class to match the design in css -->
-						<a class="collection-button" href="#">Vaata kollektsiooni</a>
-					</header>
 				</article>
 				<article id="collection456" class="item">
+					<header>
+						<h3>Maastiku maalid</h3>
+						<p class="collection-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+						<a class="collection-button" href="#">Vaata kollektsiooni</a>
+					</header>
 					<div class="image-container">
 						<a href="#"><img src="content/20555_t.jpg" alt="Hugo Mitt &quot;Astrid vaasis&quot;"></a>
 						<a href="#"><img src="content/20509_t.jpg" alt="Edmond Arnold Blumenfeldt &quot;Notre-Dame / Jumalaema kirik Pariisis&quot;"></a>
 						<a href="#"><img src="content/20516_t.jpg" alt="Edmond Arnold Blumenfeldt &quot;Seened ja lilled&quot;"></a>
 						<a href="#"><img src="content/20515_t.jpg" alt="Edmond Arnold Blumenfeldt &quot;Viinamarjad ja seened&quot;"></a>
 					</div>
-					<header>
-						<h3>Maastiku maalid</h3>
-						<p class="collection-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
-						<a class="collection-button" href="#">Vaata kollektsiooni</a>
-					</header>
 				</article>
 				<article id="collection789" class="item">
+					<header>
+						<h3>Maastiku maalid</h3>
+						<p class="collection-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+						<a class="collection-button" href="#">Vaata kollektsiooni</a>
+					</header>
 					<div class="image-container">
 						<a href="#"><img src="content/20555_t.jpg" alt="Hugo Mitt &quot;Astrid vaasis&quot;"></a>
 						<a href="#"><img src="content/20509_t.jpg" alt="Edmond Arnold Blumenfeldt &quot;Notre-Dame / Jumalaema kirik Pariisis&quot;"></a>
 						<a href="#"><img src="content/20516_t.jpg" alt="Edmond Arnold Blumenfeldt &quot;Seened ja lilled&quot;"></a>
 						<a href="#"><img src="content/20515_t.jpg" alt="Edmond Arnold Blumenfeldt &quot;Viinamarjad ja seened&quot;"></a>
 					</div>
-					<header>
-						<h3>Maastiku maalid</h3>
-						<p class="collection-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
-						<a class="collection-button" href="#">Vaata kollektsiooni</a>
-					</header>
 				</article>
 			</div>
 		</section>
@@ -176,39 +173,83 @@ axs.menu.cfg={
 <footer id="site-footer">
 	<section class="newsletter">
 		<div class="max-width">
-			<h2 class="visuallyhidden">HAUS GALERII UUDISKIRI</h2>
-				<form id="newsletter" action="https://haus.sendsmaily.net/api/opt-in/" method="post" autocomplete="on">
-		<div class="txt">     
-</div>
-		
-		<input type="hidden" name="key" value="9aBiSfzLpc0Ywypc6WP3fw2l85lF1fgL5C0KYkndDtA,">
-		<!--input type="hidden" name="autoresponder" value="1" /-->
-		<input type="hidden" name="success_url" value="https://localhost/haus.ee/?c=home&amp;amp;l=et&amp;amp;msg=ok">
-		<input type="hidden" name="failure_url" value="https://localhost/haus.ee/?c=home&amp;amp;l=et&amp;amp;msg=fail">
-		<label for="newsletter-email">Liitu meie uudiskirjaga ja ole kursis meie näituste ja oksjonitega!</label>
-		<input id="newsletter-email" name="email" type="email" required="required" placeholder="e-posti aadress*">
-		<button type="submit">liitu</button>
-		<div style="overflow:hidden;width:0;height:0;"><input type="text" name="re-email"></div>
-		<script>
-			if (document.querySelector('#newsletter .msg')) window.addEventListener('load',function(){
-				document.getElementById('newsletter').scrollIntoView();
-				});
-		</script>
-	</form>
+			<h2 class="visuallyhidden">Uudiskirjaga liitumine</h2>
+			<form id="newsletter" action="https://haus.sendsmaily.net/api/opt-in/" method="post" autocomplete="on">
+				<div class="txt"></div>
+				<input type="hidden" name="key" value="9aBiSfzLpc0Ywypc6WP3fw2l85lF1fgL5C0KYkndDtA,">
+				<!--input type="hidden" name="autoresponder" value="1" /-->
+				<input type="hidden" name="success_url" value="http://haus.ee.klient.veebimajutus.ee/?c=home&amp;amp;l=et&amp;amp;msg=ok">
+				<input type="hidden" name="failure_url" value="http://haus.ee.klient.veebimajutus.ee/?c=home&amp;amp;l=et&amp;amp;msg=fail">
+				<label for="newsletter-email">Liitu meie uudiskirjaga ja ole kursis meie näituste ja oksjonitega!</label>
+				<input id="newsletter-email" name="email" type="email" value="" required="required" placeholder="e-posti aadress*">
+				<button type="submit">liitu</button>
+				<div style="position:absolute;overflow:hidden;width:0;height:0;"><input type="text" name="re-email" value=""></div>
+				<script>
+					if (document.querySelector('#newsletter .msg')) window.addEventListener('load',function(){
+						document.getElementById('newsletter').scrollIntoView();
+						});
+				</script>
+			</form>
 		</div>
 	</section>
-	<div class="max-width content">
-		<section class="footer">
-			     <h2>Haus Galerii</h2>	<address>Address: Uus 17, 10111 Tallinn<br>	<br>	T - R 11-18,<br>	L 11-17<br>	E, P - suletud<br>	<br>	<a href="mailto:haus@haus.ee">haus@haus.ee</a><br>	<a href="tel:+3726419471">+372 6419 471</a></address>	
-
-		</section>
-		<!--nav id="menu-footer">
-			<h2 class="visuallyhidden">Menüü</h2>
-			{$menu.menu-footer}
-		</nav>
+	<div class="content max-width">
 		<section class="socialmedia">
-			{$content.footer-socialmedia}
-		</section-->
+			<h2 class="title">Jälgi meid</h2>
+			     <p>
+					<a href="https://facebook.com" target="_blank"><img alt="Facebook" height="14" src="plugins/haus-ee/gfx/icon.socialmedia.facebook.svg" width="8"></a>
+					<a href="https://instagram.com" target="_blank"><img alt="Instagram" height="14" src="plugins/haus-ee/gfx/icon.socialmedia.insta.svg" width="15"></a>
+					<a href="https://spotify.com" target="_blank"><img alt="Spotify" height="14" src="plugins/haus-ee/gfx/icon.socialmedia.spotify.png" width="19"></a>
+				</p>
+		</section>
+		<section class="footer">
+			<h2>Haus Galerii</h2>
+				<address>Address: Uus 17, 10111 Tallinn<br>
+					<br>T - R 11-18,<br>L 11-17<br>	E, P - suletud<br><br>
+					<a href="mailto:haus@haus.ee">haus@haus.ee</a><br>
+					<a href="tel:+3726419471">+372 6419 471</a>
+				</address>
+		</section>
+		<nav id="menu-footer" class="menu">
+			<h2 class="visuallyhidden">Jaluse menüü</h2>
+			<ul>
+				<li id="menu-footer-info" class="submenu"><a href="?c=info&amp;l=et" aria-current="true"><em>Info</em></a>
+					<ul>
+						<li id="menu-footer-ost1" class=""><a href="?c=ost1&amp;l=et">Ost</a></li>
+						<li id="menu-footer-muuk1" class=""><a href="?c=muuk1&amp;l=et">Müük</a></li>
+						<li id="menu-footer-meiat" class=""><a href="?c=meiat&amp;l=et">Meiat</a></li>
+						<li id="menu-footer-meedia" class=""><a href="?c=meedia&amp;l=et">Meedia</a></li>
+						<li id="menu-footer-privaatsus" class=""><a href="?c=privaatsus&amp;l=et">Privaatsus</a></li>
+						<li id="menu-footer-kunstiindeks1" class=""><a href="?c=kunstiindeks1&amp;l=et">Kunstiindeks</a></li>
+					</ul>
+				</li>
+				<li id="menu-footer-kunst1" class="submenu"><a href="?c=kunst1&amp;l=et" aria-current="true"><em>Kunst</em></a>
+					<ul>
+						<li id="menu-footer-hausi-fookuses" class=""><a href="?c=hausi-fookuses&amp;l=et">Hausi fookuses</a></li>
+						<li id="menu-footer-kaasaegne-kunst" class=""><a href="?c=kaasaegne-kunst&amp;l=et">Kaasaegne kunst</a></li>
+						<li id="menu-footer-noor-kunst" class=""><a href="?c=noor-kunst&amp;l=et">Noor kunst</a></li>
+						<li id="menu-footer-vana-kunst" class=""><a href="?c=vana-kunst&amp;l=et">Vana kunst</a></li>
+						<li id="menu-footer-kollektsioonid" class=""><a href="?c=kollektsioonid&amp;l=et">Kollektsioonid</a></li>
+						<li id="menu-footer-kunstnikud" class=""><a href="?c=kunstnikud&amp;l=et">Kunstnikud</a></li>
+					</ul>
+				</li>
+				<li id="menu-footer-naitused" class="submenu"><a href="?c=naitused&amp;l=et" aria-current="true"><em>Näitused</em></a>
+					<ul>
+						<li id="menu-footer-kaesolev--tulemas" class=""><a href="?c=kaesolev--tulemas&amp;l=et">Käesolev &amp; tulemas</a></li>
+						<li id="menu-footer-toimunud" class=""><a href="?c=toimunud&amp;l=et">Toimunud</a></li>
+						<li id="menu-footer-info1" class=""><a href="?c=info1&amp;l=et">Info</a></li>
+					</ul>
+				</li>
+				<li id="menu-footer-oksjonid" class="submenu"><a href="?c=oksjonid&amp;l=et" aria-current="true"><em>Oksjonid</em></a>
+					<ul>
+						<li id="menu-footer-kaesolev" class=""><a href="?c=kaesolev&amp;l=et">Käesolev</a></li>
+						<li id="menu-footer-oksjoni-arhiiv" class=""><a href="?c=oksjoni-arhiiv&amp;l=et">Oksjoni arhiiv</a></li>
+						<li id="menu-footer-teoste-muugis-statistika" class=""><a href="?c=teoste-muugis-statistika&amp;l=et">Teoste müügis statistika</a></li>
+						<li id="menu-footer-kunstifilmid" class=""><a href="?c=kunstifilmid&amp;l=et">Kunstifilmid</a></li>
+						<li id="menu-footer-kord" class=""><a href="?c=kord&amp;l=et">Kord</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
 	</div>
 	<div class="author"><small class="max-width">Haus Galerii © 2024</small></div>
 	<nav class="axs inpage top js hide" lang="en"><a href="#">Go to top</a></nav>
