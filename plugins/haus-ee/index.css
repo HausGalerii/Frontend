@@ -13,7 +13,8 @@ html {
 	margin:0;
 	padding:0;
 	min-height:100.20%;
-	--maxWidthOuter:1rem;
+	--siteMaxWidth:2000px;
+	--siteMaxWidthOuter:1rem;
 	--underlineColor:rgb(211,172,44);
 	--formBorderColor:rgb(135,135,135);
 	--formBorder:solid 1px var(--formBorderColor);
@@ -92,10 +93,10 @@ form {}
 		padding-right:0.5rem;
 		}
 	button, input[type="button"], input[type="submit"] {
-		border:var(--formBorder);
+		border: solid 1.5px white;
 		padding-left:1.5rem;
 		padding-right:1.5rem;
-		
+		text-transform: uppercase;
 		}
 	input[readonly="readonly"] {	background:rgb(240,240,240);	}
 	select {	border:var(--formBorder);	}
@@ -170,9 +171,9 @@ ul li {}
 .max-width {
 	margin-left:auto;
 	margin-right:auto;
-	border-left:var(--maxWidthOuter) solid transparent;
-	border-right:var(--maxWidthOuter) solid transparent;
-	max-width:30cm;
+	border-left:var(--siteMaxWidthOuter) solid transparent;
+	border-right:var(--siteMaxWidthOuter) solid transparent;
+	max-width:var(--siteMaxWidth);
 	}
 /*	<Menu basic styles>
 	See lib/axs.css for pre-defined classes. */
@@ -202,6 +203,24 @@ div.msg, p.msg, ul.msg {}
 		text-decoration:none;
 		}
 	.pager .pages .current strong {}
+html .axs.ui.contentlimit.pixels span.switch {	background:#000;	}
+	html .axs.ui.contentlimit.pixels span.switch button {
+		border:none;
+		padding:2rem;
+		height:auto;
+		font-weight:700;
+		}
+		html .axs.ui.contentlimit.pixels span.switch button::after {
+			content:"";
+			display:inline-block;
+			margin-left:3rem;
+			width:1rem;
+			height:1rem;
+			vertical-align:middle;
+			background:url(gfx/arrow.expand.png) right no-repeat;
+			background-size:contain;
+			}
+	html .axs.ui.contentlimit.pixels span.switch.close button::after {	    transform:scaleY(-1);	}
 /*</Class-based styles common to all sections>*/
 
 /*<Styles for specific elements>*/
@@ -311,8 +330,8 @@ div.msg, p.msg, ul.msg {}
 #content {
 	display:block;
 	flex-grow:10000;
-	padding-top:1rem;
-	padding-bottom:1rem;
+	padding-top:3rem;
+	padding-bottom:3rem;
 	}
 /* <some plugins> */
 	/*html.plugin-search #content mark {	font-weight:bold;	}*/
@@ -367,9 +386,10 @@ div.msg, p.msg, ul.msg {}
 			#site-footer section.newsletter form label {
 				flex-grow:3;
 				font-weight:700;
+				font-size: 16px;
 				}
 			#site-footer section.newsletter form input {
-				flex-grow:3;
+				flex-grow: 9;
 				}
 	#site-footer section.socialmedia {
 		display:flex;
@@ -388,7 +408,7 @@ div.msg, p.msg, ul.msg {}
 			}
 	#site-footer div.content {	border:none;	}
 		#site-footer div.content>* {
-			padding:1.5rem var(--maxWidthOuter);
+			padding:1.5rem var(--siteMaxWidthOuter);
 			}
 		#site-footer div.content section.footer {}
 			#site-footer div.content section.footer a:is([href^="tel:"],[href^="mailto:"]) {
@@ -409,8 +429,8 @@ div.msg, p.msg, ul.msg {}
 		#site-footer div.content>.menu {
 			border:solid rgb(72,72,72);
 			border-width:2px 0 0 0;
-			padding-left:calc(var(--maxWidthOuter) + 1rem);
-			padding-right:calc(var(--maxWidthOuter) + 1rem);
+			padding-left:calc(var(--siteMaxWidthOuter) + 1rem);
+			padding-right:calc(var(--siteMaxWidthOuter) + 1rem);
 			}
 		#site-footer div.content>.menu {}
 			#site-footer div.content>.menu>ul {
@@ -449,9 +469,9 @@ div.msg, p.msg, ul.msg {}
 
 /*<Device-specific styles>*/
 @media all and (min-width:45em) { /* 45*12px=720px */
-	html {	--maxWidthOuter:3rem;	}
+	html {	--siteMaxWidthOuter:3rem;	}
 	#axs_media::before {	content:"screen";	}
-	figure {	display:inline-block;	}
+	
 	nav.mobile_toggle .title { /* Hide title of the menu for screen media type. */
 		position:absolute;
 		left:-999em;
@@ -460,6 +480,9 @@ div.msg, p.msg, ul.msg {}
 	#site-header {
 		position:sticky;
 		top:0;
+		z-index:10000;
+		--logoWidth:5rem;
+		--logoWidthSpace:2rem;
 		}
 		#site-header .max-width>div {
 			display:flex;
@@ -467,7 +490,8 @@ div.msg, p.msg, ul.msg {}
 			}
 		#site-header .top .col3>* {	flex-grow:1;	}
 		#site-header .top .col3>.col1 {
-			flex-basis:4.5rem;
+			flex-basis:var(--logoWidth);
+			flex-grow:0;
 			text-align:center;
 			}
 			#site-header .top .col3>.col1 img {	vertical-align:middle;	}
@@ -476,21 +500,22 @@ div.msg, p.msg, ul.msg {}
 				justify-content:center;
 				column-gap:0.5rem;
 				}
+				#site-header .top .col3>.col1>p>* {	flex-grow:1;	}
 		#site-header .top .col3>.col2 {
 			flex-grow:100;
-			padding-left:1.5rem;
+			padding-left:var(--logoWidthSpace);
 			}
 		#site-header nav.menu>ul>li ul {	border:none;	}
 			#site-header nav.menu>ul>li ul li {	border:none;	}
-		#site-header>.row2>div {	margin-left:6rem;	}
+		#site-header>.row2>div {	margin-left:calc(var(--logoWidth) + var(--logoWidthSpace));	}
 		#site-header>.row2>.logo {
 			position:static;
 			display:block;
 			float:left;
-			width:4.5rem;
+			width:var(--logoWidth);
 			}
 			#site-header>.row2>.logo img {
-				margin:0;
+				margin:0 0 1rem 0;
 				width:100%;
 				vertical-align:middle;
 				}
@@ -512,11 +537,12 @@ div.msg, p.msg, ul.msg {}
 				}
 				#site-header .row2>div.menu>#menu1>ul>li>a {
 					padding-top:0.8rem;
-					padding-bottom:0.9rem;
+					padding-bottom:0.1rem;
+					min-height:2.5rem;
 					}
 				#site-header .row2>div.menu>#menu1>ul>li>ul {
 					left:-1.5rem;
-					border-top:solid 2px rgb(72,72,73);
+					border-top:solid 2px rgb(72,72,72);
 					padding:0.4rem 1rem;
 					width:fit-content;
 					background:rgb(37,37,37);
@@ -563,8 +589,8 @@ div.msg, p.msg, ul.msg {}
 	#site-footer div.content {
 		display:flex;
 		align-items:stretch;
-		border-left:solid var(--maxWidthOuter) transparent;
-		border-right:solid var(--maxWidthOuter) transparent;
+		border-left:solid var(--siteMaxWidthOuter) transparent;
+		border-right:solid var(--siteMaxWidthOuter) transparent;
 		}
 		#site-footer div.content>* {
 			padding-top:2.5rem;
@@ -598,6 +624,9 @@ div.msg, p.msg, ul.msg {}
 				margin-bottom:1rem;
 				white-space:nowrap;
 				}
+	}
+	input:focus {
+		outline: none;
 	}
 @media all and (min-width:63em) { /* 60*16px=960px */
 	#site-footer div.content>.socialmedia p {	column-gap:2rem;	}

@@ -1,0 +1,58 @@
+@import "exhibitions.plugin.css";
+#content > .max-width {
+  border: none;
+  max-width: none;
+}
+
+.form-search {
+  padding-top: var(--padding);
+  padding-bottom: var(--padding);
+}
+
+.form-search form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #252525;
+  gap: 20px;
+}
+
+.form-search .input {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  border: var(--button-border) #878787;
+}
+
+.form-search input {
+  width: 100%;
+}
+
+#no-border {
+  border: none;
+}
+
+.form-search select {
+  border: none;
+  border-bottom: 1px solid;
+}
+
+@media only screen and (min-width: 800px) {
+  .form-search form {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+  }
+
+  .form-search .input {
+    width: 800px;
+  }
+
+  .form-search select {
+    width: 800px;
+  }
+}

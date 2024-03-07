@@ -1,21 +1,39 @@
+Update 07.03:
+
+1. I linked the css file with the other css page.
+2. I made the `<select>` element and search look like in the design. There is a weird blue "x" symbol while typing in the `<input>` field.
+3. There is a `<div class="sisukord-container">` missing from containing the `<a>` elements on the `Toimunud näitused` site. If you could please tell me which file contains the template for it.
+
+Update 04.03:
+
+1. Updated the footer of the website to fit the figma design.
+2. Added icons in SVG format, but the mail and link icon aren't displayed because they are not in the html.
+3. Fixed site header `file-wide` image. It was a very tricky problem.
+
 Update 27.02:
 
 1. Edited exhibitions.list.tpl to match the design in figma:
+
 - Added a `flex-container` class to contain elements in the `<a>`
 - Moved the `<h3>` element between the divs
+
 2. Edited exhibitions.article.tpl:
+
 - I added `exhibition-txt` class to move the text and match the design in figma
 - make sure to add the images
 - added a `date-location` div to display the date and location in one line
 - added `sisukord-container` div to contain the buttons in `exhibitions.article.contents.tpl`
 - added 2 divs: `artist-details, price-status` in `exhibitions.article.artworks.pic.tpl`
 - added div `line` to create lines in the page
+
 3. Issues:
+
 - I do not know how to make the gradient with css over the button without changing the JS code. Please help.
 - Is it possible to add a class named `image-container` to contain all of the `<figure>` in one div?
 - On chrome, the `file_wide img` breaks the site when I change the Responsive size
 - I added 3 new social media pngs but in `exhibitions.article.tpl` I can't directly add the social media,
-here is a snippet of how it should look like:
+  here is a snippet of how it should look like:
+
 ```
 <div class="social">
 	<div class="exhibition-txt">Näitus</div>
@@ -34,7 +52,6 @@ Update 19.02:
 4. Button is now responsive, removed `display: flex;`. I added `display: inline-block; max-width: 300px;` and padding.
 
 I have updated the site to correspond to the example one, with `index.css` and `index.html`
-
 
 Update 18.02:
 
