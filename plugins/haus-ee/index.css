@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url(index.form.css);
 /*2023-01-20*/
 /*@font-face {
 	font-family:Share;
@@ -15,6 +16,7 @@ html {
 	min-height:100.20%;
 	--siteMaxWidth:2000px;
 	--siteMaxWidthOuter:1rem;
+	--main-color: #d0aa2c;
 	--underlineColor:rgb(211,172,44);
 	--formBorderColor:rgb(135,135,135);
 	--formBorder:solid 1px var(--formBorderColor);
@@ -99,7 +101,13 @@ form {}
 		text-transform: uppercase;
 		}
 	input[readonly="readonly"] {	background:rgb(240,240,240);	}
-	select {	border:var(--formBorder);	}
+	select {
+		border:var(--formBorder);
+		background-color:inherit;
+		}
+		select option {
+			/*background:#fff;*/
+			}
 	textarea {}
 	label .comment {
 		display:block;
@@ -168,6 +176,7 @@ ul li {}
 /*</Generic element styles>*/
 
 /*<Class-based styles common to all sections>*/
+span.throbber {	background:rgba(0,0,0,0.8);	}
 .max-width {
 	margin-left:auto;
 	margin-right:auto;

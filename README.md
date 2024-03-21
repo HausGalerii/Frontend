@@ -1,4 +1,38 @@
+
+
 Update 07.03:
+
+21.03 Update:
+
+1. > Don't set height on the image, let it grow as much as it needs.
+   > Okay, now in web view the image height grows 👍
+   >
+2. > In the page "Näitused toimunud" all years have the same layout in figma. Your version has later year different.
+   > I don't understand, could you please elaborate and add a picture of what you're referring to?
+   >
+3. I think we should remove the word "Hind"(price in english), it messes up the design
+   ![image](https://github.com/HausGalerii/Frontend/assets/117300935/4bb4d5be-be50-484f-a5d3-8c46eb4b6ba8)
+4. I added the max-width to some elements in exhibitions page to match the figma layout and design
+5. Please help me display only 1 image in carousel in mobile view. Suggested solution:
+
+```
+				<script>
+				   var groupCount = 2; // Default group count for larger screens
+				    if (window.innerWidth <= 1000) { 
+    				    groupCount = 1; // Set group count for smaller screens
+    				}
+
+					axs.sliderLegacy.init("#views",{
+						type:'carousel',
+						play:false,
+						group_count: groupCount,
+						prev_lbl:'<img src="{$theme.dir}gfx/slider.arrow.png" alt="<" />',
+						next_lbl:'<img src="{$theme.dir}gfx/slider.arrow.png" alt=">" />'
+						});
+				</script>
+
+```
+
 
 1. I linked the css file with the other css page.
 2. I made the `<select>` element and search look like in the design. There is a weird blue "x" symbol while typing in the `<input>` field.

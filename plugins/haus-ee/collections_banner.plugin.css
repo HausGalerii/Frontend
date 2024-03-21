@@ -82,7 +82,7 @@
   gap: 10px;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 800px) {
   #collections-banner .max-width {
     padding-bottom: var(--padding);
   }
@@ -92,10 +92,15 @@
     flex-direction: row;
     padding-top: var(--padding);
     padding-bottom: 0;
+    align-items: center;
   }
 
   #collections-banner header {
     padding-right: var(--padding);
+  }
+
+  .image-container {
+    gap: 20px;
   }
 
   .box-container {
@@ -107,5 +112,11 @@
 
   .collection-text {
     width: 320px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .image-container {
+    gap: 30px;
   }
 }
