@@ -1,6 +1,6 @@
-
-
-Update 07.03:
+09.04 Update:
+I updated the index.css and index.form.css and auth.tpl files.
+The Artists Page is almost complete.
 
 21.03 Update:
 
@@ -32,7 +32,6 @@ Update 07.03:
 				</script>
 
 ```
-
 
 1. I linked the css file with the other css page.
 2. I made the `<select>` element and search look like in the design. There is a weird blue "x" symbol while typing in the `<input>` field.

@@ -10,13 +10,21 @@
 /*div, form, ul, li {	outline:dotted 1px;	}*/
 
 /*<Generic element styles>*/
+:root {
+	--main-color: #D0AA2C;
+	--padding: 2rem;
+	--small-padding: 1rem;
+	--button-border: solid 1px;
+	--line-color: #484848;
+	--gray: #878787;
+	--gradient: linear-gradient(180deg, rgba(0, 0, 0, 0) 46.59%, #010203 100%);
+  }
 html {
 	margin:0;
 	padding:0;
 	min-height:100.20%;
 	--siteMaxWidth:2000px;
 	--siteMaxWidthOuter:1rem;
-	--main-color: #d0aa2c;
 	--underlineColor:rgb(211,172,44);
 	--formBorderColor:rgb(135,135,135);
 	--formBorder:solid 1px var(--formBorderColor);
@@ -236,7 +244,7 @@ html .axs.ui.contentlimit.pixels span.switch {	background:#000;	}
 #site-header {
 	border-bottom:solid 2px rgb(72,72,72);
 	background:inherit;
-	font-size:0.9rem;
+	font-size:0.95rem;
 	}
 	#site-header a {	text-decoration:none;	}
 	#site-header p {
@@ -244,9 +252,10 @@ html .axs.ui.contentlimit.pixels span.switch {	background:#000;	}
 		padding:0;
 		}
 	#site-header>.top {
-		margin-bottom:1.5rem;
-		padding:0.5rem 0;
+		margin-bottom:2rem;
+		padding:0.6rem 0;
 		background:rgb(37,37,37);
+		font-size:0.8rem;
 		}
 	#site-header nav.menu>ul {
 		margin:0;
@@ -258,16 +267,19 @@ html .axs.ui.contentlimit.pixels span.switch {	background:#000;	}
 			}
 			#site-header nav.menu>ul>li>a {
 				display:block;
-				padding:0.5rem 1rem;
+				padding:0.5rem 1.5rem;
 				}
 			#site-header nav.menu>ul li.current {	background:none;	}
 			#site-header nav.menu>ul>li.open>a,
-			#site-header nav.menu>ul>li.current>a {
+			#site-header nav.menu>ul li.current>a {
 				text-decoration:underline solid var(--underlineColor);
 				text-underline-offset:0.2rem;
 				}
-				#site-header nav.menu>ul>li>a em {	font-style:normal;	}
-				#site-header nav.menu>ul>li>a strong {	font-weight:normal;	}
+				#site-header nav.menu>ul li>a em {	font-style:normal;	}
+				#site-header nav.menu>ul li>a strong {	font-weight:normal;	}
+			#site-header nav.menu ul li.menu2col ul {
+				column-count:2;
+				}
 	#site-header a.logo {
 		position:fixed;
 		left:0.5rem;
@@ -296,7 +308,7 @@ html .axs.ui.contentlimit.pixels span.switch {	background:#000;	}
 			color:#fff;
 			}
 		#site-header div.search form.search input {
-			height:1.8rem;
+			height:2.5rem;
 			width:calc(100% - 3rem);
 			}
 		#site-header div.search form.search button {
@@ -331,7 +343,7 @@ html .axs.ui.contentlimit.pixels span.switch {	background:#000;	}
 			background:#000;
 			text-align:right;
 			}
-			#site-header div.menu nav.menu#menu1>ul {	margin-left:-1rem;	}
+			#site-header div.menu nav.menu#menu1>ul {	margin-left:-1.5rem;	}
 	#site-header div.row2 .menu {	text-align:right;	}
 		#site-header div.row2 .menu>div {
 			display:inline-block;
@@ -351,7 +363,7 @@ html .axs.ui.contentlimit.pixels span.switch {	background:#000;	}
 	--hColor:rgb(135,135,135);
 	--hSize:0.9rem;
 	background:rgb(37,37,37);
-	font-size:0.7rem;
+	font-size:0.8rem;
 	font-family:"Ubuntu", "Arial", sans-serif;
 	}
 	#site-footer a {	text-decoration:none;	}
@@ -490,8 +502,8 @@ html .axs.ui.contentlimit.pixels span.switch {	background:#000;	}
 		position:sticky;
 		top:0;
 		z-index:10000;
-		--logoWidth:5rem;
-		--logoWidthSpace:2rem;
+		--logoWidth:6.1rem;
+		--logoWidthSpace:2.5rem;
 		}
 		#site-header .max-width>div {
 			display:flex;
@@ -538,6 +550,7 @@ html .axs.ui.contentlimit.pixels span.switch {	background:#000;	}
 			#site-header .row2>div.search #menu2 {	order:2;	}
 			#site-header .row2>div.search #site-langs {	order:3;	}
 		#site-header div.row2 .menu {
+			padding-top:0.4rem;
 			text-align:left;
 			}
 			#site-header .row2>div.menu>#menu1 {
@@ -547,10 +560,10 @@ html .axs.ui.contentlimit.pixels span.switch {	background:#000;	}
 				#site-header .row2>div.menu>#menu1>ul>li>a {
 					padding-top:0.8rem;
 					padding-bottom:0.1rem;
-					min-height:2.5rem;
+					min-height:2.7rem;
 					}
 				#site-header .row2>div.menu>#menu1>ul>li>ul {
-					left:-1.5rem;
+					left:-1rem;
 					border-top:solid 2px rgb(72,72,72);
 					padding:0.4rem 1rem;
 					width:fit-content;
@@ -558,19 +571,20 @@ html .axs.ui.contentlimit.pixels span.switch {	background:#000;	}
 					}
 					#site-header .row2>div.menu>#menu1>ul>li ul li a {
 						padding:0.3rem 1.5rem;
+						width:max-content;
 						color:inherit;
 						}
 			#site-header .row2>div.menu>div {
-				flex-basis:3rem;
+				flex-basis:3.5rem;
 				flex-grow:0;
 				text-align:right;
 				}
 				#site-header .row2>div.menu>div>a {
 					display:block;
-					padding-top:0.4rem;
+					padding-top:0.9rem;
 					}
 				#site-header .row2>div.menu>div>a>img {
-					width:1.5rem;
+					width:1.9rem;
 					}
 	#content {
 		min-height:2em;
