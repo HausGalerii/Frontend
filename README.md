@@ -1,3 +1,6 @@
+10.04 Update:
+Finished Teenused page.
+
 09.04 Update:
 I updated the index.css and index.form.css and auth.tpl files.
 The Artists Page is almost complete.

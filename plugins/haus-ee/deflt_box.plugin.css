@@ -1,0 +1,56 @@
+/* 2024-04-10 */
+.plugin-deflt_box .deflt_box:has(h2) {
+    padding: var(--small-padding);
+}
+
+.plugin-deflt_box .deflt_box h1 {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.plugin-deflt_box .deflt_box h2 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.plugin-deflt_box .deflt_box p {
+    font-size: 12px;
+}
+
+@media only screen and (min-width: 800px) {
+    #content .max-width {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--padding);
+    }
+
+    .plugin-deflt_box .deflt_box h1 {
+        margin-bottom: 40px;
+        font-size: 32px;
+    }
+
+    .plugin-deflt_box .deflt_box h2 {
+        margin-bottom: 20px;
+        font-size: 24px;
+    }
+
+    .plugin-deflt_box .deflt_box p {
+        font-size: 16px;
+    }
+
+    .plugin-deflt_box .deflt_box:has(h1) {
+        width: 100%;
+    }
+
+    .plugin-deflt_box .deflt_box:has(h1) p {
+        width: 905px;
+    }
+
+    .plugin-deflt_box .deflt_box:has(h2){
+        flex: 25%;
+        padding: 0;
+        padding-right: 20px;
+        width: 380px;
+    }
+}
