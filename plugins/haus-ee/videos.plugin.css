@@ -1,0 +1,49 @@
+.page-kunstifilmid #articles_list section {
+    padding-bottom: 4rem;
+}
+
+.page-kunstifilmid #articles_list section article {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-bottom: var(--padding);
+}
+
+.page-kunstifilmid #articles_list h2 {
+    font-size: 25px;
+    /* I made the font bigger because it looks better in mobile view */
+}
+
+.page-kunstifilmid #articles_list section article a,
+.page-kunstifilmid #articles_list section article a h3 {
+    text-decoration: none;
+}
+
+.page-kunstifilmid #articles_list section article a {
+    padding-top: var(--small-padding);
+}
+
+@media only screen and (min-width: 800px) {
+    .page-kunstifilmid #articles_list section {
+        grid-template-columns: repeat(2, 1fr);
+        display: grid;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .page-kunstifilmid #articles_list h2 {
+        grid-column: 1 / -1;
+    }
+
+    .page-kunstifilmid #articles_list section article {
+        min-width: 300px;
+        padding-right: 50px;
+    }
+}
+
+
+
+@media only screen and (min-width: 1100px) {
+    .page-kunstifilmid #articles_list section {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

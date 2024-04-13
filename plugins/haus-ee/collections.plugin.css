@@ -1,0 +1,74 @@
+@import "exhibitions.plugin.css";
+#content article.article .artworks figure.artwork figcaption .price {
+	position: relative;
+    padding: 0 0 0 1rem;
+	}
+	#content article.article .artworks figure.artwork figcaption .price .u {
+	  position: absolute;
+	  left: 0;
+	  top: 0;
+	}
+
+/* 2024-04-12 */
+.page-kollektsioonid #content .max-width {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: var(--small-padding);
+	margin-right: var(--small-padding);
+    flex-direction: column;
+	gap: var(--small-padding);
+}
+
+.page-kollektsioonid .max-width h1 {
+    margin-bottom: 20px;
+}
+
+.page-kollektsioonid .max-width:has(h1) p {
+	line-height: 20px;
+}
+
+.page-kollektsioonid #articles_list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.page-kollektsioonid #articles_list article {
+	padding-top: var(--padding);
+}
+
+.page-kollektsioonid #articles_list article a {
+	text-decoration: none;
+}
+
+.page-kollektsioonid #articles_list article a div {
+	padding-top: 20px;
+	text-decoration: none !important;
+}
+
+.page-kollektsioonid #articles_list article a h2 {
+	padding-top: 5px;
+	text-decoration: none !important;
+}
+
+@media only screen and (min-width: 1000px) {
+	.page-kollektsioonid #content .max-width {
+		margin: 0;
+	}
+
+    .page-kollektsioonid .max-width h1 {
+        font-size: 32px;
+    }
+
+    .page-kollektsioonid .max-width:has(h1) p {
+		font-size: 16px;
+        width: 905px;
+    }
+
+	.page-kollektsioonid #articles_list {
+		gap: 40px;
+	}
+
+	.page-kollektsioonid #articles_list article {
+		flex: 25%;
+	}
+}

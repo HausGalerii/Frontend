@@ -62,13 +62,23 @@ html form.axs .element.type-range-between  input[type=number][data-range="max"] 
 html form.axs .element.type-range-between span.spr {	display:none;	}
 
 /* 2024-04-09 */
-.desktop-view {
+.page-kunstnikud .desktop-view {
 	display: none;
 }
 
-.mobile-view .auth {
-	display: grid;
-    grid-template-columns: 1fr 1fr;
+/* accordion for form */
+.page-kunstnikud .accordion h2 {
+	margin: 0;
+    padding: var(--small-padding);
+    display: flex;
+    justify-content: space-between;
+	text-decoration: none;
+    background-color: #252525;
+}
+
+.page-kunstnikud .accordion h2 button {
+	width: var(--padding);
+	border: none;
 }
 
 #form-search {
@@ -110,7 +120,7 @@ html form.axs .element.type-range-between span.spr {	display:none;	}
 	order: 0;
 }
 
-.a ul {
+.page-kunstnikud .a ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -119,12 +129,17 @@ html form.axs .element.type-range-between span.spr {	display:none;	}
     flex-wrap: wrap;
 }
 
-.mobile-view .cat,
-.mobile-view .cat ul {
-	display: contents;
+.page-kunstnikud .a ul .current {
+	text-decoration: underline solid var(--underlineColor);
+	text-underline-offset: 0.2em;
 }
-	
-.cat ul li{
+
+.page-kunstnikud .auth h1 {
+	order: -1;
+	font-size: 25px;
+}
+
+.page-kunstnikud .cat ul li{
 	text-decoration: none;
 	width: 140px;
 	display: flex;
@@ -136,13 +151,34 @@ html form.axs .element.type-range-between span.spr {	display:none;	}
 	margin-bottom: var(--padding);
 }
 
-.line {
+.page-kunstnikud .cat a,
+.page-kunstnikud .a a {
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.page-kunstnikud .cat ul {
+	display: grid;
+	justify-items: center;
+	padding: 0;
+	grid-template-columns: repeat(auto-fit, minmax(max(200px, 17%), 1fr));
+	padding-top: var(--small-padding);
+	padding-bottom: var(--small-padding);
+}
+
+.page-kunstnikud .cat ul .current {
+	order: -1;
+	border: solid 3px var(--underlineColor);
+}
+
+
+.page-kunstnikud .line {
 	border-top: 2px solid var(--line-color);
 	margin-bottom: var(--padding);
 	margin-top: var(--padding);
 }
 
-.list {
+.page-kunstnikud .list {
 	display: grid;
 	grid-template-columns: 1;
 	gap: 20px;
@@ -150,43 +186,21 @@ html form.axs .element.type-range-between span.spr {	display:none;	}
 	text-align: left;
 }
 
-.list a {
+.page-kunstnikud .list a {
 	text-decoration: none;
 }
 
-.auth h1 {
-	order: -1;
-	font-size: 20px;
+.page-kunstnikud .list .title {
+	display: contents;
+	text-decoration: none;
 }
 
-.a {
+.page-kunstnikud .a {
 	padding-bottom: var(--padding);
 	padding-top: var(--padding);
 }
 
-.cat a,
-.a a {
-  font-size: 16px;
-  text-decoration: none;
-}
-
-.cat ul {
-	display: grid;
-	gap: 20px;
-	grid-template-columns: repeat(auto-fit, minmax(max(200px, 17%), 1fr));
-	padding-top: var(--small-padding);
-	padding-bottom: var(--small-padding);
-}
-
-.cat ul .current {
-	order: -1;
-}
-
 @media only screen and (min-width: 500px) {
-	.auth h1 {
-		font-size: 25px;
-	}
-
 	#form-search select {
 		width: 200px;
 	}
@@ -194,26 +208,28 @@ html form.axs .element.type-range-between span.spr {	display:none;	}
 
 /* 2024-03-30 */
 @media only screen and (min-width: 800px) {
-	.mobile-view {
+	.page-kunstnikud .auth h1 {
+		font-size: 32px;
+	}
+
+	.page-kunstnikud .accordion h2 {
 		display: none;
 	}
 
-	.desktop-view {
+	.page-kunstnikud .mobile-view {
+		display: none;
+	}
+
+	.page-kunstnikud .desktop-view {
 		display: initial;
 	}
     
-	.desktop-view .auth {
+	.page-kunstnikud .desktop-view .auth {
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
 		align-items: center;
 	}
-
-	.cat ul .current {
-		order: -1;
-		border: solid 3px var(--underlineColor);
-	}
-	
 
 	#form-search {
 		flex-direction: row;
@@ -238,20 +254,28 @@ html form.axs .element.type-range-between span.spr {	display:none;	}
 		order: initial;
 	}
 	
-	.cat ul li {
+	.page-kunstnikud .cat ul {
+		gap: 20px;
+	}
+
+	.page-kunstnikud .cat ul li {
 		width: 180px;
 		margin-bottom: 0;
 	}
 
-	.list {
+	.page-kunstnikud .list {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr); /* Creates a four-column layout */
 		gap: 20px;
 		padding: var(--padding); 
 		text-align: left;
 	}
+
+	.page-kunstnikud .list .title {
+		display: none;
+	}
 	
-	.list a {
+	.page-kunstnikud .list a {
 		text-decoration: none;
 	}
 }
