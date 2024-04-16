@@ -1,8 +1,13 @@
+16.04 Update:
+
+1. Today I finished Collections page and Videos page.
+2. Artists page has the search field.
+3. I started working on the Artists profile page
+
 13.04 Update:
 
 1. Artists Page is overall finished, the only thing missing is the search box in mobile view.
 2. Käesolevad näitused carousel is still lacking the stylizing to make the 2 images have a space between like in the design
-   ![img](https://imgur.com/dfs3Wtg)
 3. I worked on the first page for Kunstifilmid. I posted a question on Asana, I am now waiting for Ivar's reply to Karola's response and to the iframe issue.
    https://app.asana.com/0/0/1207067724285266
 4. I started working on Kollektsioonid

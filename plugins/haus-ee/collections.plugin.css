@@ -1,4 +1,16 @@
 @import "exhibitions.plugin.css";
+/* remember to not affect the other page */
+html.plugin-collections .articles-level-article#content {
+	padding-top: 0;
+}
+
+#content > .max-width:not(:has(.kollektsioonid)) {
+    margin: 0;
+    border: none;
+    padding-top: 0;
+    max-width: none;
+}
+
 #content article.article .artworks figure.artwork figcaption .price {
 	position: relative;
     padding: 0 0 0 1rem;
@@ -10,7 +22,11 @@
 	}
 
 /* 2024-04-12 */
-.page-kollektsioonid #content .max-width {
+.max-width:has(h1) p {
+	line-height: 20px;
+}
+
+#content .max-width:has(.kollektsioonid) {
 	display: flex;
 	flex-wrap: wrap;
 	margin-left: var(--small-padding);
@@ -19,56 +35,57 @@
 	gap: var(--small-padding);
 }
 
-.page-kollektsioonid .max-width h1 {
+.max-width:has(.kollektsioonid) h1 {
     margin-bottom: 20px;
 }
 
-.page-kollektsioonid .max-width:has(h1) p {
-	line-height: 20px;
-}
-
-.page-kollektsioonid #articles_list {
+.max-width:has(.kollektsioonid) #articles_list {
 	display: flex;
 	flex-wrap: wrap;
 }
 
-.page-kollektsioonid #articles_list article {
+.max-width:has(.kollektsioonid) #articles_list article {
 	padding-top: var(--padding);
 }
 
-.page-kollektsioonid #articles_list article a {
+.max-width:has(.kollektsioonid) #articles_list article a {
 	text-decoration: none;
 }
 
-.page-kollektsioonid #articles_list article a div {
+.max-width:has(.kollektsioonid) #articles_list article a div {
 	padding-top: 20px;
 	text-decoration: none !important;
 }
 
-.page-kollektsioonid #articles_list article a h2 {
+.max-width:has(.kollektsioonid) #articles_list article a h2 {
 	padding-top: 5px;
 	text-decoration: none !important;
 }
 
+.max-width:not(:has(.kollektsioonid)) figure a img {
+	width: 500px;
+}
+
+
 @media only screen and (min-width: 1000px) {
-	.page-kollektsioonid #content .max-width {
-		margin: 0;
-	}
-
-    .page-kollektsioonid .max-width h1 {
-        font-size: 32px;
-    }
-
-    .page-kollektsioonid .max-width:has(h1) p {
+	.max-width:has(h1) p {
 		font-size: 16px;
         width: 905px;
     }
 
-	.page-kollektsioonid #articles_list {
+	.max-width:not(:has(.kollektsioonid)){
+		margin: 0;
+	}
+
+    .max-width:has(.kollektsioonid) h1 {
+        font-size: 32px;
+    }
+
+	.max-width:has(.kollektsioonid) #articles_list {
 		gap: 40px;
 	}
 
-	.page-kollektsioonid #articles_list article {
+	.max-width:has(.kollektsioonid) #articles_list article {
 		flex: 25%;
 	}
 }

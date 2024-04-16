@@ -1,73 +1,43 @@
 @charset "UTF-8";
+:root {
+	--main-color: #D0AA2C;
+	--padding: 2rem;
+	--small-padding: 1rem;
+	--button-border: solid 1px;
+	--line-color: #484848;
+	--gray: #878787;
+	--gradient: linear-gradient(180deg, rgba(0, 0, 0, 0) 46.59%, #010203 100%);
+}
 form.axs.search .element>label,
 form.axs.search .element>legend {
 	position:absolute;
 	left:-999rem;
 	top:-999rem;
 	}
-html form.axs .element.type-range-between .slider {	background:none;	}
-	html form.axs .element.type-range-between .slider::before,
-	html form.axs .element.type-range-between .slider::after {
-		position:absolute;
-		z-index:-5;
-		top:calc(0.3rem + 2px);
-		display:block;
-		box-sizing:border-box;
-		border:solid 1px rgb(84,84,84);
-		border-radius:50%;
-		width:0.6rem;
-		height:0.6rem;
-		background:#000;
-		content:"";
-		}
-	html form.axs .element.type-range-between .slider::after {	right:0;	}
-	html form.axs .element.type-range-between .slider input[type="range"] {
-		background-color:rgb(84,84,84);
-		}
-html form.axs .element.type-range-between  .slider input[type=range][data-range="max"] {
-	background-color:rgb(211,172,44);
-	background-size:calc(100% - 1.2rem) 100%;
-	}
 
-form.axs .element.type-range-between  .slider input[type=range]::-webkit-slider-thumb {
-	width:0.6rem;
-	height:0.6rem;
-	border-color:rgb(211,172,44);
-	background:#000;
-	}
+/* 2024-04-14 */
 
-html form.axs .element.type-range-between  .slider input[type=range]::-moz-range-thumb {
-	width:0.6rem;
-	height:0.6rem;
-	border-color:rgb(211,172,44);
-	background:#000;
-	}
-html form.axs .element.type-range-between  input[type=number] {
-	border:none;
-	padding:0;
-	}
-html form.axs .element.type-range-between  input[type=number][data-range="max"] {
-	float:right;
-	text-align:right;
-	}
-	html form.axs .element.type-range-between  input[type=number] {
-		-moz-appearance:textfield;
-		}
-	html form.axs .element.type-range-between  input[type=number]::-webkit-inner-spin-button, 
-	html form.axs .element.type-range-between  input[type=number]::-webkit-outer-spin-button {
-		-webkit-appearance:none;
-		margin:0;
-		opacity:1;
-		}
-html form.axs .element.type-range-between span.spr {	display:none;	}
-
-/* 2024-04-09 */
-.page-kunstnikud .desktop-view {
-	display: none;
+html form.axs .element.type-range-between legend {
+	display: contents;
 }
 
+html form.axs .element.type-range-between .slider input[type=range]::-webkit-slider-thumb {
+	width:0.6rem;
+	height:0.6rem;
+	border-color:rgb(211,172,44);
+	background:rgb(37,37,37);
+}
+	
+html form.axs .element.type-range-between .slider input[type=range]::-moz-range-thumb {
+	width:0.6rem;
+	height:0.6rem;
+	border-color:rgb(211,172,44);
+	background:rgb(37,37,37);
+}
+
+/* 2024-04-09 */
 /* accordion for form */
-.page-kunstnikud .accordion h2 {
+.accordion .section-title {
 	margin: 0;
     padding: var(--small-padding);
     display: flex;
@@ -76,9 +46,12 @@ html form.axs .element.type-range-between span.spr {	display:none;	}
     background-color: #252525;
 }
 
-.page-kunstnikud .accordion h2 button {
-	width: var(--padding);
+.accordion .section-title button {
 	border: none;
+}
+
+section.open button.switch img {
+    transform: rotate(180deg); /* Rotates the button 180 degrees */
 }
 
 #form-search {
@@ -120,84 +93,19 @@ html form.axs .element.type-range-between span.spr {	display:none;	}
 	order: 0;
 }
 
-.page-kunstnikud .a ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
+/* 2024-04-16 */
 
-.page-kunstnikud .a ul .current {
-	text-decoration: underline solid var(--underlineColor);
-	text-underline-offset: 0.2em;
-}
-
-.page-kunstnikud .auth h1 {
-	order: -1;
-	font-size: 25px;
-}
-
-.page-kunstnikud .cat ul li{
-	text-decoration: none;
-	width: 140px;
-	display: flex;
-	padding: 10px;
-	font-size: 13px;
-	border: var(--formBorder);
-	border-color: var(--underlineColor);
-	justify-content: center;
-	margin-bottom: var(--padding);
-}
-
-.page-kunstnikud .cat a,
-.page-kunstnikud .a a {
-  font-size: 16px;
-  text-decoration: none;
-}
-
-.page-kunstnikud .cat ul {
+#search-name {
 	display: grid;
-	justify-items: center;
-	padding: 0;
-	grid-template-columns: repeat(auto-fit, minmax(max(200px, 17%), 1fr));
-	padding-top: var(--small-padding);
-	padding-bottom: var(--small-padding);
+    border: 1px solid rgb(135, 135, 135);
+    width: fit-content;
+    justify-items: end;
+    grid-template-columns: 1fr 1fr;
 }
 
-.page-kunstnikud .cat ul .current {
-	order: -1;
-	border: solid 3px var(--underlineColor);
-}
-
-
-.page-kunstnikud .line {
-	border-top: 2px solid var(--line-color);
-	margin-bottom: var(--padding);
-	margin-top: var(--padding);
-}
-
-.page-kunstnikud .list {
-	display: grid;
-	grid-template-columns: 1;
-	gap: 20px;
-	padding: var(--padding); 
-	text-align: left;
-}
-
-.page-kunstnikud .list a {
-	text-decoration: none;
-}
-
-.page-kunstnikud .list .title {
-	display: contents;
-	text-decoration: none;
-}
-
-.page-kunstnikud .a {
-	padding-bottom: var(--padding);
-	padding-top: var(--padding);
+#search-name #name_container input,
+#search-name #s_container button{
+	border: none;
 }
 
 @media only screen and (min-width: 500px) {
@@ -208,27 +116,8 @@ html form.axs .element.type-range-between span.spr {	display:none;	}
 
 /* 2024-03-30 */
 @media only screen and (min-width: 800px) {
-	.page-kunstnikud .auth h1 {
-		font-size: 32px;
-	}
-
-	.page-kunstnikud .accordion h2 {
+	.accordion .section-title {
 		display: none;
-	}
-
-	.page-kunstnikud .mobile-view {
-		display: none;
-	}
-
-	.page-kunstnikud .desktop-view {
-		display: initial;
-	}
-    
-	.page-kunstnikud .desktop-view .auth {
-		display: flex;
-		justify-content: space-between;
-		flex-wrap: wrap;
-		align-items: center;
 	}
 
 	#form-search {
@@ -252,31 +141,6 @@ html form.axs .element.type-range-between span.spr {	display:none;	}
 	#form-search #style_container,
 	#form-search #pricerange {
 		order: initial;
-	}
-	
-	.page-kunstnikud .cat ul {
-		gap: 20px;
-	}
-
-	.page-kunstnikud .cat ul li {
-		width: 180px;
-		margin-bottom: 0;
-	}
-
-	.page-kunstnikud .list {
-		display: grid;
-		grid-template-columns: repeat(4, 1fr); /* Creates a four-column layout */
-		gap: 20px;
-		padding: var(--padding); 
-		text-align: left;
-	}
-
-	.page-kunstnikud .list .title {
-		display: none;
-	}
-	
-	.page-kunstnikud .list a {
-		text-decoration: none;
 	}
 }
 

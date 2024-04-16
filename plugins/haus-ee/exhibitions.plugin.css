@@ -1,3 +1,15 @@
+/*2024-04-14*/
+#content #views .list a { 
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0 5rem;
+  width: 100%; 
+}
+
+p {
+  max-width: 905px;
+}
+
 /*2024-03-21*/
 article.article.exhibition.value-views-0 #views {
   display: none;
@@ -8,6 +20,7 @@ article.article.exhibition.value-views-0 #views {
   grid-template-columns: 50px 1fr 50px; /* size of arrows and gallery width */
   align-items: center; 
 }
+
 
 #views .prev, #views .next {
   display: flex;
@@ -33,14 +46,14 @@ article.article.exhibition.value-views-0 #views {
 /*2024-02-23*/
 /* näitused */
 
-:root {
+/* :root {
   --line-color: #484848;
   --gray: #878787;
   --button-border: solid 1px;
   --padding: 2rem;
   --small-padding: 1rem;
   --gradient: linear-gradient(180deg, rgba(0, 0, 0, 0) 46.59%, #010203 100%);
-}
+} */
 
 section {
   padding-bottom: var(--padding);
@@ -54,7 +67,7 @@ section {
 
 .load-more a {
   text-decoration: none;
-  border: var(--button-border) var(--main-color);
+  border: var(--button-border) var(--underlineColor);
   padding: var(--small-padding);
   padding-left: 3rem;
   padding-right: 3rem;
@@ -112,18 +125,21 @@ html.plugin-exhibitions .articles-level-article#content > .max-width {
   max-width: none;
 }
 
-article.article.exhibition {
+article.article.exhibition,
+article.article.collections {
   padding: 0;
 }
 
-article.article.exhibition .file_wide {
+article.article.exhibition .file_wide_image,
+article.article.collections .file_wide_image {
   position: relative;
   background: rgb(0, 0, 0);
   text-align: center;
   min-height: 3em;
 }
 
-article.article.exhibition .file_wide img {
+article.article.exhibition .file_wide_image img,
+article.article.collections .file_wide_image img {
   vertical-align: middle;
   width: 100%;
   object-position: left;
@@ -132,7 +148,8 @@ article.article.exhibition .file_wide img {
   padding-bottom: 0;
 }
 
-article.article.exhibition .file_wide::before {
+article.article.exhibition .file_wide_image::before,
+article.article.collections .file_wide_image::before {
   content: "";
   position: absolute;
   top: 0;
@@ -145,22 +162,26 @@ article.article.exhibition .file_wide::before {
 
 /* 2024-02-24 */
 
-article.article.exhibition .line {
+article.article.exhibition .line,
+article.article.collections .line {
   border-top: 2px solid var(--line-color);
   margin-bottom: var(--padding);
   margin-top: var(--padding);
 }
 
-article.article.exhibition .text {
+article.article.exhibition .text,
+article.article.collections .text {
   padding-top: var(--padding);
 }
 
-article.article.exhibition .text h2 {
+article.article.exhibition .text h2,
+article.article.collections .text h2 {
   font-size: 15px;
   text-decoration: none;
 }
 
-article.article.exhibition .social {
+article.article.exhibition .social,
+article.article.collections .social {
   display: flex;
   justify-content: space-between;
   align-content: center;
@@ -168,13 +189,15 @@ article.article.exhibition .social {
   gap: 20px;
 }
 
-article.article.exhibition .socialmedia2 {
+article.article.exhibition .socialmedia2,
+article.article.collections .socialmedia2 {
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
-article.article.exhibition .socialmedia {
+article.article.exhibition .socialmedia,
+article.article.collections .socialmedia {
   display: none;
 }
 
@@ -188,33 +211,38 @@ article.article.exhibition .socialmedia {
   align-items: center;
 }
 
-article.article.exhibition .max-width .sisukord-container {
+article.article.exhibition .max-width .sisukord-container,
+article.article.collections .max-width .sisukord-container {
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(max(200px, 17%), 1fr));
 }
 
-article.article.exhibition .max-width .sisukord-container a {
+article.article.exhibition .max-width .sisukord-container a,
+article.article.collections .max-width .sisukord-container a {
   text-decoration: none;
   width: 180px;
   display: flex;
   padding: 10px;
   font-size: 13px;
   border: var(--button-border);
-  border-color: var(--main-color);
+  border-color: var(--underlineColor);
   justify-content: center;
 }
 
-article.article.exhibition header .exhibition-txt {
+article.article.exhibition header .exhibition-txt,
+article.article.collections header .exhibition-txt {
   text-transform: uppercase;
 }
 
-article.article.exhibition header h1 {
+article.article.exhibition header h1,
+article.article.collections header h1 {
   padding-top: var(--small-padding);
   text-transform: uppercase;
 }
 
-article.article.exhibition header .date-location {
+article.article.exhibition header .date-location,
+article.article.collections header .date-location {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -223,24 +251,19 @@ article.article.exhibition header .date-location {
   gap: 20px;
 }
 
-.artworks {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-}
-
-article.article.exhibition .artworks .text-limited {
+article.article.exhibition .artworks .text-limited,
+article.article.collections .artworks .text-limited {
   flex-basis: 100%;
   flex-grow: 3;
 }
 
-article.article.exhibition .artwork {
+article.article.exhibition .artwork,
+article.article.collections .artwork {
   padding-top: var(--padding);
 }
 
-article.article.exhibition .artwork figcaption a {
+article.article.exhibition .artwork figcaption a,
+article.article.collections .artwork figcaption {
   display: flex;
   text-decoration: none;
   max-width: 500px;
@@ -250,18 +273,24 @@ article.article.exhibition .artwork figcaption a {
   margin-right: 10px;
 }
 
-article.article.exhibition .artist-details {
+article.article.exhibition .artist-details,
+article.article.collections .artist-details {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  /* max-width: 180px; */
 }
 
-article.article.exhibition .price-status {
+article.article.exhibition .price-status,
+article.article.collections .price-status {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
 
-article.article.exhibition .artwork a .status {
+article.article.exhibition .artwork a .status,
+article.article.collections .artwork figcaption .status {
+  padding: 0;
   padding-top: 0.2rem;
   font-size: 16px;
   text-decoration: underline solid var(--underlineColor);
@@ -275,17 +304,30 @@ article.article.exhibition .artwork a .aut {
   font-size: 20px;
 }
 
-article.article.exhibition .artwork a .title {
+article.article.collections .artwork figcaption .price,
+article.article.collections .artwork figcaption .aut {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+article.article.exhibition .artwork a .title,
+article.article.collections .artwork figcaption .title {
   font-size: 20px;
   font-style: italic;
   padding-top: 0.5rem;
   color: #e5e5e5;
 }
 
-article.article.exhibition .artwork a .tech {
+article.article.exhibition .artwork a .tech,
+article.article.collections .artwork figcaption .tech {
   font-size: 16px;
   padding-top: var(--small-padding);
   color: #e5e5e5;
+}
+
+.article.article.collections .artwork figcaption button {
+  border: none;
+  text-transform: capitalize;
 }
 
 .artworks {
@@ -317,7 +359,13 @@ article.article.exhibition .artwork a .tech {
 }
 
 @media only screen and (min-width: 800px) {
-  .artwork{
+  article.article.exhibition .artist-details,
+  article.article.collections .artist-details {
+    max-width: 150px;
+  }
+
+  article.article.exhibition .artwork,
+  article.article.collections .artwork {
     margin: 15px;
     max-width: 400px;
   }
@@ -335,7 +383,8 @@ article.article.exhibition .artwork a .tech {
     display: none !important;
   }
 
-  article.article.exhibition .socialmedia {
+  article.article.exhibition .socialmedia,
+  article.article.collections .socialmedia {
     display: flex;
     align-items: center;
     gap: 15px;
@@ -346,15 +395,38 @@ article.article.exhibition .artwork a .tech {
   }
 
   .artworks {
+    justify-items: start;
     grid-template-columns: repeat(2, 1fr);
   }
 
-  article.article.exhibition .file_wide img {
+  article.article.exhibition .file_wide_image img,
+  article.article.collections .file_wide_image img {
     height: auto !important;
   }
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 900px) {
+  article.article.exhibition .artist-details,
+  article.article.collections .artist-details {
+    max-width: 180px;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  article.article.exhibition .artist-details,
+  article.article.collections .artist-details {
+    max-width: 150px;
+  }
+  /* 2024-04-14 */
+  #content #views .list a {
+    display: inline-block;
+    width: 49%; 
+  }
+
+  #content #views .list a:last-child {
+    float: right;
+  }
+
   .artwork{
     margin: 30px;
     max-width: 400px;
@@ -365,20 +437,24 @@ article.article.exhibition .artwork a .tech {
     padding-right: 7rem;
   }
 
-  article.article.exhibition .file_wide img {
+  article.article.exhibition .file_wide_image img,
+  article.article.collections .file_wide_image img {
     width: 100%;
     object-fit: cover;
   }
 
-  article.article.exhibition header .exhibition-txt {
+  article.article.exhibition header .exhibition-txt,
+  article.article.collections header .exhibition-txt {
     font-size: small;
   }
 
-  article.article.exhibition header .date-location {
+  article.article.exhibition header .date-location,
+  article.article.collections header .date-location {
     gap: 30px;
   }
 
-  article.article.exhibition .h1-date-location {
+  article.article.exhibition .h1-date-location,
+  article.article.collections .h1-date-location {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
@@ -402,5 +478,13 @@ article.article.exhibition .artwork a .tech {
 
   .artworks {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+@media only screen and (min-width: 1300px) {
+  article.article.exhibition .artist-details,
+  article.article.collections .artist-details {
+    max-width: 200px;
   }
 }

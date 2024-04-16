@@ -70,7 +70,7 @@
   padding: 10px;
   font-size: 13px;
   border: var(--button-border);
-  border-color: var(--main-color);
+  border-color: var(--underlineColor);
   color: rgba(255, 255, 255, 0.7);
 }
 

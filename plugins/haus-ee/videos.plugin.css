@@ -1,49 +1,119 @@
-.page-kunstifilmid #articles_list section {
+/* can be removed */
+.clear-content::after {
+    display: none;
+}
+
+p {
+    max-width: 905px;
+    font-size: 12px;
+}
+
+#articles_list section {
     padding-bottom: 4rem;
 }
 
-.page-kunstifilmid #articles_list section article {
+#articles_list section article {
     display: flex;
     flex-direction: column-reverse;
     padding-bottom: var(--padding);
 }
 
-.page-kunstifilmid #articles_list h2 {
+#articles_list h2 {
     font-size: 25px;
     /* I made the font bigger because it looks better in mobile view */
 }
 
-.page-kunstifilmid #articles_list section article a,
-.page-kunstifilmid #articles_list section article a h3 {
+#articles_list section article a,
+#articles_list section article a h3 {
     text-decoration: none;
 }
 
-.page-kunstifilmid #articles_list section article a {
+#articles_list section article a {
     padding-top: var(--small-padding);
 }
 
+#articles_list > article,
+.articles-level-article article {
+    display: grid;
+    grid-column-gap: var(--padding);
+}
+
+#articles_list > article .code,
+.articles-level-article .summary {
+    order: 1;
+}
+
+#articles_list > article:has(h2) h2,
+.articles-level-article .title {
+    order: 2;
+    padding-bottom: var(--small-padding);
+    padding-top: var(--small-padding);
+}
+
+#articles_list > article:has(h2) h2 a,
+.articles-level-article > .max-width > a {
+    text-decoration: underline solid var(--underlineColor);
+    text-underline-offset: 0.2em;
+}
+
+#articles_list > article .text,
+.articles-level-article .text {
+    order: 3;
+}
+
+.articles-level2 article {
+    padding-bottom: 40px;
+}
+
 @media only screen and (min-width: 800px) {
-    .page-kunstifilmid #articles_list section {
+    p {
+        font-size: 16px;
+    }
+
+    #articles_list section {
         grid-template-columns: repeat(2, 1fr);
         display: grid;
         flex-wrap: wrap;
         gap: 20px;
     }
 
-    .page-kunstifilmid #articles_list h2 {
+    #articles_list section h2 {
         grid-column: 1 / -1;
     }
 
-    .page-kunstifilmid #articles_list section article {
+    #articles_list section article {
         min-width: 300px;
         padding-right: 50px;
     }
+
+    #articles_list > article {
+        align-items: center;
+    }
+
+    #articles_list > article,
+    .articles-level-article article {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    #articles_list > article .code,
+    .articles-level-article .summary {
+        grid-row: 1 / 3;
+    }
+
+    #articles_list > article:has(h2) h2,
+    .articles-level-article .title {
+        padding: 0;
+    }
+
+    
+    .articles-level2 article {
+        padding-bottom: 80px;
+    }
 }
 
-
-
 @media only screen and (min-width: 1100px) {
-    .page-kunstifilmid #articles_list section {
+    #articles_list section {
         grid-template-columns: repeat(3, 1fr);
     }
 }
