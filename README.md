@@ -1,42 +1,44 @@
-16.04 Update:
+17.04 Update:
+
+1. I worked on Toimunud and Artists profile page. They are both almost done. I would like access to the next pages so I can work on their css.
+
+   16.04 Update:
 
 1. Today I finished Collections page and Videos page.
-2. Artists page has the search field.
-3. I started working on the Artists profile page
+1. Artists page has the search field.
+1. I started working on the Artists profile page
 
-13.04 Update:
+   13.04 Update:
 
 1. Artists Page is overall finished, the only thing missing is the search box in mobile view.
-2. Käesolevad näitused carousel is still lacking the stylizing to make the 2 images have a space between like in the design
-3. I worked on the first page for Kunstifilmid. I posted a question on Asana, I am now waiting for Ivar's reply to Karola's response and to the iframe issue.
+1. Käesolevad näitused carousel is still lacking the stylizing to make the 2 images have a space between like in the design
+1. I worked on the first page for Kunstifilmid. I posted a question on Asana, I am now waiting for Ivar's reply to Karola's response and to the iframe issue.
    https://app.asana.com/0/0/1207067724285266
-4. I started working on Kollektsioonid
-5. Ivar please give me access to Oksjionid Kord page
+1. I started working on Kollektsioonid
+1. Ivar please give me access to Oksjionid Kord page
 
-10.04 Update:
-Finished Teenused page.
+   10.04 Update:
+   Finished Teenused page.
 
-09.04 Update:
-I updated the index.css and index.form.css and auth.tpl files.
-The Artists Page is almost complete.
+   09.04 Update:
+   I updated the index.css and index.form.css and auth.tpl files.
+   The Artists Page is almost complete.
 
-21.03 Update:
+   21.03 Update:
 
 1. > Don't set height on the image, let it grow as much as it needs.
    > Okay, now in web view the image height grows 👍
-   >
-2. > In the page "Näitused toimunud" all years have the same layout in figma. Your version has later year different.
+1. > In the page "Näitused toimunud" all years have the same layout in figma. Your version has later year different.
    > I don't understand, could you please elaborate and add a picture of what you're referring to?
-   >
-3. I think we should remove the word "Hind"(price in english), it messes up the design
+1. I think we should remove the word "Hind"(price in english), it messes up the design
    ![image](https://github.com/HausGalerii/Frontend/assets/117300935/4bb4d5be-be50-484f-a5d3-8c46eb4b6ba8)
-4. I added the max-width to some elements in exhibitions page to match the figma layout and design
-5. Please help me display only 1 image in carousel in mobile view. Suggested solution:
+1. I added the max-width to some elements in exhibitions page to match the figma layout and design
+1. Please help me display only 1 image in carousel in mobile view. Suggested solution:
 
 ```
 				<script>
 				   var groupCount = 2; // Default group count for larger screens
-				    if (window.innerWidth <= 1000) { 
+				    if (window.innerWidth <= 1000) {
     				    groupCount = 1; // Set group count for smaller screens
     				}
 

@@ -1,9 +1,9 @@
 /*2024-04-14*/
-#content #views .list a { 
+#content #views .list a {
   display: inline-block;
   box-sizing: border-box;
   padding: 0 5rem;
-  width: 100%; 
+  width: 100%;
 }
 
 p {
@@ -18,16 +18,16 @@ article.article.exhibition.value-views-0 #views {
 #views {
   display: grid;
   grid-template-columns: 50px 1fr 50px; /* size of arrows and gallery width */
-  align-items: center; 
+  align-items: center;
 }
 
-
-#views .prev, #views .next {
+#views .prev,
+#views .next {
   display: flex;
   justify-content: center;
-  align-items: center; 
-  cursor: pointer; 
-  z-index: 10; 
+  align-items: center;
+  cursor: pointer;
+  z-index: 10;
 }
 
 #views .scroll {
@@ -87,6 +87,7 @@ section {
   box-sizing: border-box;
   padding: 10px;
   flex: 1 1 100%;
+  max-width: 700px;
 }
 
 .article-container article .flex-container {
@@ -420,14 +421,14 @@ article.article.collections .artwork figcaption .tech {
   /* 2024-04-14 */
   #content #views .list a {
     display: inline-block;
-    width: 49%; 
+    width: 49%;
   }
 
   #content #views .list a:last-child {
     float: right;
   }
 
-  .artwork{
+  .artwork {
     margin: 30px;
     max-width: 400px;
   }
@@ -480,7 +481,6 @@ article.article.collections .artwork figcaption .tech {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-
 
 @media only screen and (min-width: 1300px) {
   article.article.exhibition .artist-details,
