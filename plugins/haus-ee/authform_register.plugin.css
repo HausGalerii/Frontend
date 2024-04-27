@@ -1,0 +1,275 @@
+#content {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+#content h1 {
+  text-decoration: none;
+}
+
+#content h2 {
+  padding-bottom: 20px;
+  text-decoration: none;
+}
+
+#content #user-menu {
+  display: none;
+}
+
+#content #user-menu ul {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  padding-top: 55px;
+  padding-bottom: 30vh;
+  align-items: center;
+  list-style-type: none;
+}
+
+#content #user-menu ul li {
+  padding-top: 20px;
+  padding-bottom: 15px;
+  width: 250px;
+  text-align: center;
+}
+
+#content #user-menu ul li:not(.logout) {
+  border-bottom: 2px solid var(--line-color);
+}
+
+#content #user-menu ul li:has(> a[aria-current="page"]) {
+  border-bottom: 2px solid var(--underlineColor);
+}
+
+#content #user-menu ul li a {
+  text-decoration: none;
+}
+
+#content #user-menu > * {
+  background: none;
+}
+
+#content section:has(h1) {
+  padding-top: 2.3rem;
+  padding-bottom: 4rem;
+}
+
+#content section:has(h2) {
+  padding-bottom: var(--padding);
+}
+
+#content fieldset {
+  border: none;
+}
+
+#content fieldset legend {
+  display: none;
+}
+
+/* Style form elements */
+#content .element {
+  padding-bottom: 14px;
+}
+
+#content label {
+  padding-bottom: 10px;
+}
+
+#content section.account form {
+  max-width: 500px;
+}
+
+#content section.account .element {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#content section.account .element:not(.type-checkbox) label {
+  width: 30%;
+  text-align: left;
+  color: #fff;
+}
+
+#content section.account input[type="text"],
+#content section.account input[type="password"],
+#content section.account input[type="email"],
+#content section.account input[type="submit"],
+#content section.account select,
+#content section.account textarea,
+#content section.account input[type="checkbox"],
+#content section.account input[type="tel"] {
+  width: 70%;
+  padding: 10px;
+  margin-left: auto;
+  border-radius: 4px;
+  height: 40px;
+  width: 100%;
+  max-width: 335px;
+  color: #e5e5e5;
+  border: 1px solid #878787;
+}
+
+#content .element input[type="submit"] {
+  border: 1px solid var(--main-color) !important;
+}
+
+/* Style for checkboxes */
+#content .element .user_remember,
+#content .element .pass_send {
+  display: flex;
+  align-items: center;
+  gap: var(--small-padding);
+}
+
+#content .element input[type="checkbox"] {
+  height: 20px;
+  width: 20px;
+}
+
+#content section.account .element.type-checkbox {
+  display: flex;
+  padding-left: 30%; /* offset to the right */
+  gap: 30px;
+  flex-direction: row-reverse;
+}
+
+#content section.account .element.type-checkbox label {
+  display: inline; /* Keep label inline with checkbox */
+  margin-right: 10px;
+}
+
+#content section.account .element.type-checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  appearance: none;
+  border: 1px solid #878787;
+  background: #000000;
+  cursor: pointer;
+}
+
+#content section.account .element.type-checkbox input[type="checkbox"]:checked {
+  background-color: var(--main-color);
+}
+
+section .aut form {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  max-width: calc(100% - 20px);
+  width: 320px;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+section .aut form a {
+  text-decoration: none;
+  font-weight: 700;
+}
+
+section .aut form button {
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  border: none;
+  text-transform: capitalize;
+  align-items: center;
+  font-weight: 700;
+  font-size: 16px;
+  color: #878787;
+  background-image: url("./gfx/aut.follow.plus.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: var(--padding);
+}
+
+#content section figure.artwork {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  gap: var(--padding);
+  align-items: center;
+  max-width: 400px;
+}
+
+#content section figure.artwork img.pilt_t.t {
+  max-width: 128px;
+}
+
+#content section figure figcaption {
+  display: flex;
+  flex-direction: column;
+  text-transform: capitalize;
+}
+
+#content section figure figcaption :is(span) {
+  font-weight: 400;
+  font-size: 16px;
+  color: #e5e5e5;
+}
+
+#content figure dl {
+  display: flex;
+  flex-direction: column;
+}
+
+#content figure .bid-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 800px) and (min-width: 600px) {
+  #content section.art .artwork-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  #content h2 {
+    font-size: 20px;
+  }
+
+  #content .element {
+    display: flex;
+  }
+
+  #content .max-width:has(nav) {
+    margin-left: 0;
+    margin-right: auto;
+    border-left: 0;
+    border-right: 0;
+    max-width: none;
+    display: grid;
+    grid-template-columns: 0.4fr 1fr;
+  }
+
+  #content #user-menu {
+    display: initial;
+    background: #252525;
+  }
+
+  #content section:has(h1) {
+    padding-top: 4rem;
+    padding-left: 4rem;
+  }
+
+  #content section:has(h1) h1 {
+    display: none;
+  }
+
+  section .aut form button {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  #content section .artwork-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
