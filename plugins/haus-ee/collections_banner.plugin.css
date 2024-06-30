@@ -1,5 +1,4 @@
 :root {
-  --main-color: #D0AA2C;
   --padding: 2rem;
   --small-padding: 1rem;
   --button-border: solid 1px;
@@ -10,13 +9,17 @@
   margin-bottom: var(--padding);
   background: rgb(37, 37, 37);
 }
+#collections-banner .max-width {
+  border-left: 0;
+  border-right: 0;
+}
 
 #collections-banner a {
   text-decoration: none;
 }
 
 #collections-banner article {
-  display: flex; 
+  display: flex;
   flex-direction: column-reverse;
   padding-top: var(--padding);
   padding-bottom: var(--padding);
@@ -32,11 +35,17 @@
 }
 
 .box-container {
+  align-items: baseline;
   padding-top: var(--padding);
   padding-left: var(--small-padding);
   padding-right: var(--small-padding);
   display: flex;
   justify-content: space-between;
+}
+
+.box-container h2 {
+  font-weight: 700;
+  text-decoration: underline solid var(--underlineColor) 2px;
 }
 
 .collection-text {
@@ -57,6 +66,7 @@
   padding: 0.3rem 3rem 0.3rem 1rem;
   background: url(gfx/arrow.png) right no-repeat;
   background-size: auto 1.5em;
+  text-decoration: none;
 }
 
 .arrow {
@@ -74,21 +84,30 @@
   color: rgba(255, 255, 255, 0.7);
 }
 
-
-.image-container {
+#collections-banner .image-container {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
   gap: 10px;
 }
 
+/* kinkekart */
+/* 
+.page-avaleht-kinkekaart {
+} */
+
 @media only screen and (min-width: 800px) {
-  #collections-banner .max-width {
+  /* #collections-banner .max-width {
     padding-bottom: var(--padding);
+  } */
+
+  #collections-banner > div {
+    border-left: var(--siteMaxWidthOuter) solid transparent;
+    border-right: 22px solid transparent;
   }
 
   #collections-banner article {
-    display: flex; 
+    display: flex;
     flex-direction: row;
     padding-top: var(--padding);
     padding-bottom: 0;
@@ -99,7 +118,7 @@
     padding-right: var(--padding);
   }
 
-  .image-container {
+  #collections-banner .image-container {
     gap: 20px;
   }
 
@@ -116,7 +135,7 @@
 }
 
 @media only screen and (min-width: 1000px) {
-  .image-container {
+  #collections-banner .image-container {
     gap: 30px;
   }
 }

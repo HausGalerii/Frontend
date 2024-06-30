@@ -55,7 +55,7 @@
 }
 
 #content section:has(h2) {
-  padding-bottom: var(--padding);
+  padding-bottom: 50px;
 }
 
 #content fieldset {
@@ -111,8 +111,9 @@
   border: 1px solid #878787;
 }
 
-#content .element input[type="submit"] {
-  border: 1px solid var(--main-color) !important;
+#content .element input[type="submit"],
+section.reg form > a {
+  border: 1px solid var(--underlineColor) !important;
 }
 
 /* Style for checkboxes */
@@ -152,13 +153,12 @@
 }
 
 #content section.account .element.type-checkbox input[type="checkbox"]:checked {
-  background-color: var(--main-color);
+  background-color: var(--underlineColor);
 }
 
 section .aut form {
   display: flex;
   align-items: center;
-  gap: 100px;
   max-width: calc(100% - 20px);
   width: 320px;
   justify-content: space-between;
@@ -220,6 +220,18 @@ section .aut form button {
   justify-content: space-between;
 }
 
+#content figure .bid-row dd {
+  white-space: nowrap;
+}
+
+section.reg form > a {
+  padding: 10px;
+  border-radius: 4px;
+  height: 40px;
+  max-width: 335px;
+  color: #e5e5e5;
+}
+
 @media only screen and (max-width: 800px) and (min-width: 600px) {
   #content section.art .artwork-container {
     display: grid;
@@ -237,12 +249,9 @@ section .aut form button {
     display: flex;
   }
 
-  #content .max-width:has(nav) {
-    margin-left: 0;
-    margin-right: auto;
+  #content > .max-width {
     border-left: 0;
     border-right: 0;
-    max-width: none;
     display: grid;
     grid-template-columns: 0.4fr 1fr;
   }

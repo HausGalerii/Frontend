@@ -1,0 +1,21 @@
+#content.plugin-menu-page > .max-width > section.plugin-news_banner {
+  margin-top: 0;
+}
+
+#content section.plugin-news_banner > .max-width {
+  border-left: none;
+  border-right: none;
+}
+
+#content section.plugin-news_banner .list > * {
+  /*aspect-ratio:2000/450;*/
+}
+
+#content section.plugin-news_banner .list > * img.file_wide {
+  float: left;
+  margin-left: -110%;
+}
+
+#content section.plugin-news_banner .pager {
+  display: none;
+}

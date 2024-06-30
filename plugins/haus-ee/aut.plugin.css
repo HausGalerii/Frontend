@@ -81,6 +81,10 @@ td {
   gap: var(--small-padding);
 }
 
+.articles-level-article .socialmedia span {
+  color: #878787;
+}
+
 .articles-level-article article nav ul {
   list-style-type: none;
   display: flex;
@@ -283,19 +287,35 @@ td {
   display: none;
 }
 
+.hide {
+  display: none;
+}
+
 .line {
+  margin: 0;
+  border: none;
+  padding-top: 0;
+  max-width: none;
   border-top: 2px solid var(--line-color);
   margin-bottom: var(--padding);
   margin-top: var(--padding);
 }
 
 .nline {
+  margin: 0;
+  border: none;
+  padding-top: 0;
+  max-width: none;
   border-top: 2px solid var(--line-color);
   margin-top: var(--padding);
 }
 
 #content > .max-width > article > section.search {
   margin-bottom: var(--padding);
+}
+
+#content > .max-width > article > section.search > .max-width {
+  background-color: #252525;
 }
 
 #content article:not(:has(.search)) .nline {
@@ -330,6 +350,10 @@ td {
   padding-bottom: var(--padding);
 }
 
+.articles-level-article .bio {
+  margin-top: 20px;
+}
+
 @media only screen and (min-width: 650px) {
   .article-container {
     justify-content: space-between;
@@ -343,6 +367,9 @@ td {
 
 /* 2024-03-30 */
 @media only screen and (min-width: 800px) {
+  .articles-level-article header h1 {
+    font-size: 32px;
+  }
   /* videos */
   .articles-level-article > .max-width > .videos .content {
     grid-template-columns: 1fr 1fr;
@@ -357,6 +384,10 @@ td {
 
   .article-container {
     gap: 20px;
+  }
+
+  .exhibitions section h2 {
+    font-size: 24px;
   }
   /* 2024-04-17 */
   .articles-level-article .list {
@@ -375,6 +406,10 @@ td {
     gap: var(--small-padding);
   }
 
+  .articles-level-article .socialmedia2 span {
+    color: #878787;
+  }
+
   .articles-level-article .artist-details {
     max-width: 150px;
   }
@@ -390,6 +425,10 @@ td {
   .mobile-view,
   .socialmedia {
     display: none !important;
+  }
+
+  .hide {
+    display: block;
   }
 
   .desktop-view {
@@ -418,7 +457,7 @@ td {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* Creates a four-column layout */
     gap: 20px;
-    padding: var(--padding);
+    padding: 4rem;
     text-align: left;
   }
 

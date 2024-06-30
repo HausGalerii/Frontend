@@ -35,6 +35,7 @@ article.article.exhibition.value-views-0 #views {
 }
 
 #views .prev {
+  margin-left: -25px;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 }
@@ -55,7 +56,7 @@ article.article.exhibition.value-views-0 #views {
   --gradient: linear-gradient(180deg, rgba(0, 0, 0, 0) 46.59%, #010203 100%);
 } */
 
-section {
+#content section {
   padding-bottom: var(--padding);
 }
 
@@ -172,7 +173,7 @@ article.article.collections .line {
 
 article.article.exhibition .text,
 article.article.collections .text {
-  padding-top: var(--padding);
+  padding-top: var(--small-padding);
 }
 
 article.article.exhibition .text h2,
@@ -197,6 +198,12 @@ article.article.collections .socialmedia2 {
   gap: 15px;
 }
 
+article.article.exhibition .socialmedia2 a img,
+article.article.collections .socialmedia2 a img {
+  display: flex;
+  flex-basis: 25px;
+}
+
 article.article.exhibition .socialmedia,
 article.article.collections .socialmedia {
   display: none;
@@ -216,14 +223,14 @@ article.article.exhibition .max-width .sisukord-container,
 article.article.collections .max-width .sisukord-container {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(max(200px, 17%), 1fr));
+  grid-template-columns: 1fr 1fr;
 }
 
 article.article.exhibition .max-width .sisukord-container a,
 article.article.collections .max-width .sisukord-container a {
   text-decoration: none;
-  width: 180px;
   display: flex;
+  max-width: 180px;
   padding: 10px;
   font-size: 13px;
   border: var(--button-border);
@@ -319,6 +326,13 @@ article.article.collections .artwork figcaption .title {
   color: #e5e5e5;
 }
 
+article.article.exhibition .artwork a .year,
+article.article.collections .artwork figcaption .year,
+article.article.exhibition .artwork a .price,
+article.article.collections .artwork figcaption .price {
+  white-space: nowrap;
+}
+
 article.article.exhibition .artwork a .tech,
 article.article.collections .artwork figcaption .tech {
   font-size: 16px;
@@ -349,6 +363,11 @@ article.article.collections .artwork figcaption .tech {
 }
 
 @media only screen and (min-width: 650px) {
+  article.article.exhibition .max-width .sisukord-container,
+  article.article.collections .max-width .sisukord-container {
+    grid-template-columns: repeat(auto-fit, minmax(max(200px, 17%), 1fr));
+  }
+
   .article-container {
     justify-content: space-between;
   }
@@ -360,6 +379,26 @@ article.article.collections .artwork figcaption .tech {
 }
 
 @media only screen and (min-width: 800px) {
+  article.article.exhibition header h1,
+  article.article.collections header h1,
+  .page-naitused-toimunud h2 {
+    font-size: 24px;
+  }
+
+  .page-naitused h2,
+  .page-naitused-toimunud h1 {
+    font-size: 32px;
+    text-decoration: none;
+  }
+
+  article.article.exhibition h2,
+  article.article.collections h2,
+  article.article.exhibition h3,
+  article.article.collections h3 {
+    font-size: 24px;
+    margin-bottom: var(--padding);
+  }
+
   article.article.exhibition .artist-details,
   article.article.collections .artist-details {
     max-width: 150px;
@@ -389,6 +428,12 @@ article.article.collections .artwork figcaption .tech {
     display: flex;
     align-items: center;
     gap: 15px;
+  }
+
+  article.article.exhibition .socialmedia a img,
+  article.article.collections .socialmedia a img {
+    display: flex;
+    flex-basis: 25px;
   }
 
   .article-container {
@@ -424,7 +469,7 @@ article.article.collections .artwork figcaption .tech {
     width: 49%;
   }
 
-  #content #views .list a:last-child {
+  #content #views .list a :nth-child(2) {
     float: right;
   }
 
